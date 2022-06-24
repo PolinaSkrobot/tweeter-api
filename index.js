@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
     { q: req.query.search || "banana", count: 10 },
     function (err, data, response) {
       console.log(data.statuses);
-      res.data;
+      res.json(data);
     }
   );
 });
