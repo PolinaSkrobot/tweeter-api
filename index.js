@@ -18,7 +18,7 @@ const T = new Twit({
 app.get("/", (req, res) => {
   T.get(
     "search/tweets",
-    { q: req.body || "banana", count: 10 },
+    { q: req.query.search || "banana", count: 10 },
     function (err, data, response) {
       console.log(data.statuses);
       res.data;
